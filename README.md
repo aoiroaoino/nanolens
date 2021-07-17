@@ -31,7 +31,7 @@ def street: Lens[Address, String] =
 val user = User(42, "John", Address("street"))
 
 user $ (address ~ street).modify(_.toUpperCase)
-// => User(42,John,Address(street))
+// => User(42,John,Address(STREET))
 
 user $ (address ~ street).get
 // => street
