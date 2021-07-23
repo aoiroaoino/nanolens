@@ -17,7 +17,10 @@ object Example {
 
   def main(args: Array[String]): Unit = {
     val user = User(42, "John", Address("street"))
-    println { user $ (address ~ street).modify(_.toUpperCase) }
-    println { user $ (address ~ street).get }
+//    println { user $ (address ~ street).modify(_.toUpperCase) }
+//    println { user $ (address ~ street).get }
+
+    println { user $ right.review }
+    println { Either.cond(false, 42, "error") $ left.preview }
   }
 }

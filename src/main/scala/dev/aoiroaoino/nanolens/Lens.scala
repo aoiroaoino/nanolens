@@ -12,9 +12,9 @@ extension [S, A](lens: Lens[S, A]) {
   def ~[B](other: Lens[A, B]): Lens[S, B] =
     [F[_]] => (_: Functor[F]) ?=> lens[F] compose other[F]
 
-  def get: S => A = lens[[X] =>> Const[X, A]](identity)
+  def get: S => A = ??? //lens[[X] =>> Const[A, X]](Const(_))
 
-  def set: A => S => S = a => lens[Id](_ => a)
+  def set: A => S => S = a => ??? ///lens[Id](_ => Id(a))
 
-  def modify: (A => A) => S => S = lens[Id]
+  def modify: (A => A) => S => S = ??? // lens[Id](_)
 }
