@@ -1,16 +1,22 @@
 # nanolens
 
 [![CI](https://github.com/aoiroaoino/nanolens/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aoiroaoino/nanolens/actions/workflows/ci.yml)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.aoiroaoino/nanolens/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.aoiroaoino/nanolens)
 
 Nanolens is tiny and experimental lens library for Scala 3
 
 ```scala
 type Lens[S, A] = [F[_]] => Functor[F] ?=> (A => F[A]) => S => F[S]
+
+type Prism[S, T, A, B] = [P[_, _], F[_]] => (Choice[P], Applicative[F]) ?=>
+  P[A, F[B]] => P[S, F[T]]
 ```
 
 ### Installation
 
-- WIP
+```sbt
+libraryDependencies += "dev.aoiroaoino" %% "nanolens" % "[version]"
+```
 
 ### Example
 
