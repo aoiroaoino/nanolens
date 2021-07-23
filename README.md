@@ -1,7 +1,7 @@
 # nanolens
 
 [![CI](https://github.com/aoiroaoino/nanolens/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aoiroaoino/nanolens/actions/workflows/ci.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.aoiroaoino/nanolens/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.aoiroaoino/nanolens)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.aoiroaoino/nanolens_3/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.aoiroaoino/nanolens_3)
 
 Nanolens is tiny and experimental lens library for Scala 3
 
