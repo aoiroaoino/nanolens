@@ -39,6 +39,9 @@ extension [A, B](const: Const[A, B]) {
   def getConst: A = const
 }
 
+given [C]: Functor[[X] =>> Const[C, X]] with
+  def map[A, B](fa: Const[C, A])(f: A => B): Const[C, B] = fa
+
 given [C](using Monoid[C]): Applicative[[X] =>> Const[C, X]] with
   def map[A, B](fa: Const[C, A])(f: A => B): Const[C, B] = fa
   def pure[A](a: A): Const[C, A] = summon[Monoid[C]].empty
